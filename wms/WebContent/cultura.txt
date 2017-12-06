@@ -1,0 +1,5 @@
+http://www.ansa.it/sito/notizie/cultura/cultura_rss.xml
+http://xml.corriereobjects.it/rss/cultura.xml
+http://www.repubblica.it/rss/speciali/arte/rss2.0.xml
+http://www.lastampa.it/cultura/rss.xml
+http://www.ilsole24ore.com/rss/cultura.xml

@@ -1,0 +1,6 @@
+http://www.ansa.it/sito/notizie/cultura/cinema/cinema_rss.xml
+http://xml.corriereobjects.it/rss/cinema.xml
+http://www.repubblica.it/rss/spettacoli_e_cultura/rss2.0.xml
+http://www.lastampa.it/spettacoli/i-film-del-weekend/rss.xml
+http://tg24.sky.it/rss/tg24_spettacolo.xml
+http://cinema.sky.it/rss/cinema_news.xml

@@ -1,0 +1,411 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.wms.net/ontology/"
+     xml:base="http://www.wms.net/ontology/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.wms.net/ontology/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.wms.net/ontology/hasCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.wms.net/ontology/hasCategory">
+        <rdfs:range rdf:resource="http://www.wms.net/ontology/Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wms.net/ontology/hasTopic -->
+
+    <owl:ObjectProperty rdf:about="http://www.wms.net/ontology/hasTopic">
+        <rdfs:domain rdf:resource="http://www.wms.net/ontology/News"/>
+        <rdfs:range rdf:resource="http://www.wms.net/ontology/Topic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.wms.net/ontology/URL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.wms.net/ontology/URL"/>
+    
+
+
+    <!-- http://www.wms.net/ontology/description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.wms.net/ontology/description"/>
+    
+
+
+    <!-- http://www.wms.net/ontology/pubDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.wms.net/ontology/pubDate">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wms.net/ontology/sentimentScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.wms.net/ontology/sentimentScore">
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain rdf:resource="http://www.wms.net/ontology/News"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wms.net/ontology/title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.wms.net/ontology/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.wms.net/ontology/Category -->
+
+    <owl:Class rdf:about="http://www.wms.net/ontology/Category"/>
+    
+
+
+    <!-- http://www.wms.net/ontology/News -->
+
+    <owl:Class rdf:about="http://www.wms.net/ontology/News"/>
+    
+
+
+    <!-- http://www.wms.net/ontology/RSS -->
+
+    <owl:Class rdf:about="http://www.wms.net/ontology/RSS"/>
+    
+
+
+    <!-- http://www.wms.net/ontology/Topic -->
+
+    <owl:Class rdf:about="http://www.wms.net/ontology/Topic"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.wms.net/ontology/Corriere_Cronaca -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/Corriere_Cronaca">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/RSS"/>
+        <URL>http://xml.corriereobjects.it/rss/cronache.xml</URL>
+        <description>Cronaca - Corriere Della Sera</description>
+        <hasCategory rdf:resource="http://www.wms.net/ontology/Category#Cronaca"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/Corriere_Sport -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/Corriere_Sport">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/RSS"/>
+        <URL>http://xml.corriereobjects.it/rss/sport.xml</URL>
+        <hasCategory rdf:resource="http://www.wms.net/ontology/Category#Sport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/Repubblica_Calcio -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/Repubblica_Calcio">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/RSS"/>
+        <description>Calcio - Repubblica.it</description>
+        <URL>http://www.repubblica.it/rss/sport/calcio/rss2.0.xml</URL>
+        <hasCategory rdf:resource="http://www.wms.net/ontology/Category#Sport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/Repubblica_Economia -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/Repubblica_Economia">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/RSS"/>
+        <description>Economia - Repubblica.it</description>
+        <URL>http://www.repubblica.it/rss/economia/rss2.0.xml</URL>
+        <hasCategory rdf:resource="http://www.wms.net/ontology/Category#Economia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/Repubblica_Motori -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/Repubblica_Motori">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/RSS"/>
+        <URL>http://www.repubblica.it/rss/motori/rss2.0.xml</URL>
+        <description>Motori - Repubblica.it</description>
+        <hasCategory rdf:resource="http://www.wms.net/ontology/Category#Sport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/Category#Cinema -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/Category#Cinema">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/Category"/>
+        <rdfs:label>Cinema</rdfs:label>
+        <description>Cinema</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/Category#Cronaca -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/Category#Cronaca">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/Category"/>
+        <rdfs:label>Cronaca</rdfs:label>
+        <description>Cronaca</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/Category#Cultura -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/Category#Cultura">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/Category"/>
+        <rdfs:label>Cultura</rdfs:label>
+        <description>Cultura</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/Category#Economia -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/Category#Economia">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/Category"/>
+        <rdfs:label>Economia</rdfs:label>
+        <description>Economia</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/Category#Politica -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/Category#Politica">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/Category"/>
+        <rdfs:label>Politica</rdfs:label>
+        <description>Politica</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/Category#Sport -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/Category#Sport">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/Category"/>
+        <rdfs:label>Sport</rdfs:label>
+        <description>Sport</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/Category#Tecnologia -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/Category#Tecnologia">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/Category"/>
+        <rdfs:label>Tecnologia</rdfs:label>
+        <description>Tecnologia</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/RSS#Ansa_Cinema -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/RSS#Ansa_Cinema">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/RSS"/>
+        <description>Cinema - Ansa</description>
+        <URL>http://www.ansa.it/sito/notizie/cultura/cinema/cinema_rss.xml</URL>
+        <hasCategory rdf:resource="http://www.wms.net/ontology/Category#Cinema"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/RSS#Ansa_Cronaca -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/RSS#Ansa_Cronaca">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/RSS"/>
+        <description>Cronaca - Ansa</description>
+        <URL>http://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml</URL>
+        <hasCategory rdf:resource="http://www.wms.net/ontology/Category#Cronaca"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/RSS#Ansa_Cultura -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/RSS#Ansa_Cultura">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/RSS"/>
+        <description>Cultura - Ansa</description>
+        <URL>http://www.ansa.it/sito/notizie/cultura/cultura_rss.xml</URL>
+        <hasCategory rdf:resource="http://www.wms.net/ontology/Category#Cultura"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/RSS#Ansa_Economia -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/RSS#Ansa_Economia">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/RSS"/>
+        <URL>http://www.ansa.it/sito/notizie/economia/economia_rss.xml</URL>
+        <description>Economia - Ansa</description>
+        <hasCategory rdf:resource="http://www.wms.net/ontology/Category#Economia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/RSS#Ansa_Politica -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/RSS#Ansa_Politica">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/RSS"/>
+        <URL>http://www.ansa.it/sito/notizie/politica/politica_rss.xml</URL>
+        <description>Politica - Ansa</description>
+        <hasCategory rdf:resource="http://www.wms.net/ontology/Category#Politica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/RSS#Ansa_Tecnologia -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/RSS#Ansa_Tecnologia">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/RSS"/>
+        <description>Tecnologia - Ansa</description>
+        <URL>http://www.ansa.it/sito/notizie/tecnologia/tecnologia_rss.xml</URL>
+        <hasCategory rdf:resource="http://www.wms.net/ontology/Category#Tecnologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/RSS#Corriere_Cinema -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/RSS#Corriere_Cinema">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/RSS"/>
+        <description>Cinema - Corriere Della Sera</description>
+        <URL>http://xml.corriereobjects.it/rss/cinema.xml</URL>
+        <hasCategory rdf:resource="http://www.wms.net/ontology/Category#Cinema"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/RSS#Gazzetta_Calcio -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/RSS#Gazzetta_Calcio">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/RSS"/>
+        <description>Calcio - Gazzetta.it</description>
+        <URL>http://www.gazzetta.it/rss/calcio.xml</URL>
+        <hasCategory rdf:resource="http://www.wms.net/ontology/Category#Sport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/RSS#LaStampa_Tecnologia -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/RSS#LaStampa_Tecnologia">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/RSS"/>
+        <description>Tecnologia - Ansa</description>
+        <URL>http://www.lastampa.it/tecnologia/rss.xml</URL>
+        <hasCategory rdf:resource="http://www.wms.net/ontology/Category#Tecnologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/RSS#Repubblica_Cinema -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/RSS#Repubblica_Cinema">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/RSS"/>
+        <URL>http://www.repubblica.it/rss/spettacoli_e_cultura/rss2.0.xml</URL>
+        <description>Cinema - Repubblica.it</description>
+        <hasCategory rdf:resource="http://www.wms.net/ontology/Category#Cinema"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/RSS#Sky_Cinema -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/RSS#Sky_Cinema">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/RSS"/>
+        <description>Cinema - Sky Italia</description>
+        <URL>http://cinema.sky.it/rss/cinema_news.xml</URL>
+        <hasCategory rdf:resource="http://www.wms.net/ontology/Category#Cinema"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/RSS#Sole24Ore_Cronaca -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/RSS#Sole24Ore_Cronaca">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/RSS"/>
+        <description>Cronaca - Il Sole 24 Ore</description>
+        <URL>http://www.ilsole24ore.com/rss/notizie/attualita.xml</URL>
+        <hasCategory rdf:resource="http://www.wms.net/ontology/Category#Cronaca"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wms.net/ontology/RSS#Sole24Ore_Cultura -->
+
+    <owl:NamedIndividual rdf:about="http://www.wms.net/ontology/RSS#Sole24Ore_Cultura">
+        <rdf:type rdf:resource="http://www.wms.net/ontology/RSS"/>
+        <URL>http://www.ilsole24ore.com/rss/cultura.xml</URL>
+        <description>Cultura - Il Sole 24 Ore</description>
+        <hasCategory rdf:resource="http://www.wms.net/ontology/Category#Cultura"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

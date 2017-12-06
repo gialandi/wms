@@ -1,0 +1,5 @@
+http://www.ansa.it/sito/notizie/politica/politica_rss.xml
+http://xml.corriereobjects.it/rss/politica.xml
+http://www.lastampa.it/italia/politica/rss.xml
+http://www.ilsole24ore.com/rss/notizie/politica.xml
+http://tg24.sky.it/rss/tg24_politica.xml

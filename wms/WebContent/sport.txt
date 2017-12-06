@@ -1,0 +1,14 @@
+http://www.ansa.it/sito/notizie/sport/sport_rss.xml
+http://xml.corriereobjects.it/rss/sport.xml
+http://www.repubblica.it/rss/sport/rss2.0.xml
+http://www.lastampa.it/sport/rss.xml
+http://www.ilsole24ore.com/rss/notizie/sport.xml
+http://feeds.feedburner.com/SkyitSport
+http://www.gazzetta.it/rss/calcio.xml
+http://www.gazzetta.it/rss/calcio-estero.xml
+http://www.gazzetta.it/rss/formula-1.xml
+http://www.gazzetta.it/rss/tennis.xml
+http://www.tuttosport.com/rss/calcio
+http://www.tuttosport.com/rss/motori
+http://www.tuttosport.com/rss/basket
+http://www.tuttosport.com/rss/calcio/calcio-estero

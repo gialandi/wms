@@ -1,0 +1,4 @@
+http://www.ansa.it/sito/notizie/tecnologia/tecnologia_rss.xml
+http://www.repubblica.it/rss/tecnologia/rss2.0.xml
+http://www.lastampa.it/tecnologia/rss.xml
+http://www.ilsole24ore.com/rss/tecnologie/scienza.xml
